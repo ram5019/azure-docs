@@ -215,7 +215,7 @@ the page.
 
 ## Creating Forwarding Rule to Endpoint
 
-1. Login and copy script [ip_fwd.sh](https://github.com/sajitsasi/az-ip-fwd/blob/main/ip_fwd.sh) to your backend server VMs. 
+1. Login and copy script [ip_fwd.sh](https://github.com/sajitsasi/az-ip-fwd/blob/main/ip_fwd.sh) to your backend server VMs. (note:- we need to uncomment following line "net.ipv4.ip_forward=1" in /etc/sysctl.conf)
 2. Run the script on with the following options:<br/>
     **sudo ./ip_fwd.sh -i eth0 -f 1433 -a <FQDN/IP> -b 1433**<br/>
     <FQDN/IP> is the host of your SQL Managed Instance.
